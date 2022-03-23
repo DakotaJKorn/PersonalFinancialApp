@@ -1,0 +1,233 @@
+$color-1: #BB4E03;
+$color-2: #D78347;
+$color-3: #013B5E;
+$color-4: #01263E;
+$color-5: #001B25;
+$color-6: white;
+$color-7: whitesmoke;
+
+#container{
+    height: calc(100vh - 80px);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: $color-5;
+    overflow-x: auto;
+    #content-container{
+        max-width: 1600px;
+        width: 98vw;
+        display: flex;
+        #profile-container{
+            height: 600px;
+            width: 300px;
+            min-width: 300px;
+            background-color: $color-4;
+            margin: 30px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid $color-6;
+            overflow: hidden;
+
+
+
+
+            #profile-image{
+                height: 200px;
+                width: 100%;
+                background-image: url(../../../assets/images/condor2.jpg);
+                background-size: cover;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                #profile-title{
+                    height: 50px;
+                    width: 80%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 30px;
+                    color: $color-6;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    backdrop-filter: blur(20px);
+                    border-radius: 5px;
+                }
+            }
+
+            #profile-name{
+                font-size: 26px;
+                color: $color-6;
+                margin-top: 20px;
+            }
+
+            #profile-address-1{
+                font-size: 20px;
+                color: $color-6;
+                margin-top: 40px;
+            }
+            #profile-address-2{
+                font-size: 20px;
+                color: $color-6;
+                margin-top: 5px;
+            }
+            #profile-phone{
+                font-size: 20px;
+                color: $color-6;
+                margin-top: 40px;
+            } 
+            #profile-email{
+                font-size: 20px;
+                color: $color-6;
+                margin-top: 20px;
+            } 
+        }
+        
+        #account-container{
+            height: 600px;
+            width: 100vw;
+            min-width: 950px;
+            background-color: $color-4;
+            border: 1px solid $color-6;
+            margin-right: 30px;
+            margin-top: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+
+            #account-title{
+                height: 80px;
+                width:100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                color: $color-6;
+            }
+
+            #account-container-layout{
+                height: 520px;
+                width: 100%;
+                display: flex;
+                border-top: 2px solid $color-7;
+
+                #account-details{
+                    height: 100%;
+                    width: 250px;
+                    min-width: 250px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: rgba(255, 255, 255, 0.3);
+                    
+
+                    .account-details-title{
+                        font-size: 24px;
+                        color: $color-6;
+                        margin-top: 20px;
+                    }
+                    .account-details-content{
+                        margin-top: 5px;
+                        font-size: 18px;
+                        color: $color-6;
+                    }
+                    #graph-options{
+                        height:100%;
+                        width: 100%;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        cursor: pointer;
+                        background-color: rgba(255, 255, 255, 0.05);
+                        .graph-option{
+                            height: 34%;
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+
+
+                            .text{
+                                color: $color-6;
+                                font-size: 20px;
+                                margin-bottom: 10px;
+                            }
+                            .arrow{
+                                content: url('../../../assets/images/arrow-right.png');
+                                height: 30px;
+                                filter: invert(100);
+                            }
+                            &:hover{
+                                background-color: rgba(255, 255, 255, 0.2);
+                            }
+                        }
+                    }
+                    
+                }
+                #account-graph{
+                    height: 100%;
+                    width: 100%;
+                    background-color: $color-4;
+                    display: flex;
+                    
+                    
+
+                    #data{
+                        height: 100%;
+                        width: 100%;
+                        min-width: 200px;
+                        //background-color: yellow;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        #total-label{
+                            font-size: 26px;
+                            color: $color-6;
+                            margin-top: 40px;
+                        }
+                        #total-content{
+                            font-size: 22px;
+                            color: $color-6;
+                            margin-top: 10px;
+                        }
+                        #total-label2{
+                            font-size: 24px;
+                            color: $color-6;
+                            margin-top: 60px;
+                        }
+                        #total-content2{
+                            font-size: 20px;
+                            color: $color-6;
+                            margin-top: 10px;
+                        }
+                        #total-label3{
+                            font-size: 24px;
+                            color: $color-6;
+                            margin-top: 40px;
+                        }
+                        #total-content3{
+                            font-size: 20px;
+                            color: $color-6;
+                            margin-top: 10px;
+                        }
+                    }
+
+                    #pie-graph-div{
+                        height: 100%;
+                        width: 500px;
+                        display: flex;
+                        justify-content: center;
+                        #pie-graph{
+                            width: 500px;
+                        }
+
+                    }
+                }
+            }
+        }
+}
+    
+}

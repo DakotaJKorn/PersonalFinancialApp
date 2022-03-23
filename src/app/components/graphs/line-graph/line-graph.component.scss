@@ -1,0 +1,60 @@
+$color-main: white;
+$color-secondary: #19B3F4;
+$color-secondary2: #5dbfe9;
+$color-footer: #ECECEC;
+$color-green: #c7ed9f;
+$color-green-dark: #a8d481;
+$primary-font: 'Red Hat Display', sans-serif;
+
+.graph-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#graph{
+    transition: width 0.5s;
+}
+
+#lineChart{
+    background-color: white;
+    border: 1px solid $color-secondary;
+    border-radius: 3px;
+}
+
+@media screen and (max-width:1070px) { 
+    #graph{
+        width: 500px;
+    }   
+}
+
+@media screen and (max-height:600px) { 
+    #graph{
+        width: 500px;
+    }   
+}
+
+@media screen and (min-height:600px) and (min-width:1070px) { 
+    #graph{
+        width: 580px;
+    }  
+}
+
+@media screen and (min-height:700px) and (min-width:1250px) { 
+    #graph{
+        width: 740px;
+    }
+}
+
+@media screen and (min-height:800px) and (min-width:1400px) { 
+    #graph{
+        width: 900px;
+    }
+}
+
+@media screen and (min-height:900px) and (min-width:1550px) { 
+    #graph{
+        width: 1050px;
+    }
+    
+}

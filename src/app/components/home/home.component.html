@@ -1,0 +1,97 @@
+
+<div id='main-container'>
+
+    <div id='header'>
+        <div id='header-image'>
+            <div id='header-image-content'></div>
+        </div>
+        <div id='header-content'>
+            <div class='header-content-text'>Welcome to Condor Financial</div>
+            <div class='header-content-subtext'>A financial institution that keeps your security as our main priority.</div>
+            <div class='header-content-text-2' *ngIf='!loggedIn'>Login to Condor Account</div>
+            <div id='header-content-inputs' *ngIf='!loggedIn'>
+                <input class='header-content-input' type="email" placeholder="Email" [(ngModel)]='loginEmail'>
+                <input class='header-content-input' type="password" placeholder="Password" [(ngModel)]='loginPassword'> 
+                <div id='login-button' (click)='loginAttempt()'>Login</div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class='block' id='block-a'>
+
+        <div id='block-a-title'>Why create an account?</div>
+
+        <div class='block-a-content-container' id='block-a-content-container-1'>
+            <div class='block-a-content-container-half'>
+                <div class="content" id='a1' [ngClass] = '{"animation-opacity-end": a1small, "animation-opacity-start": !a1small}'>
+                    <div class='title'>{{ a1_top_text }}</div>
+                    <div class='image'>
+                        <img class='img'>
+                        <div id='hidden-text'>{{ a1_hidden_text }}</div>
+                    </div> 
+                </div>
+            </div>
+            <div class='block-a-content-container-half'>
+                <div class="content" id='a2' [ngClass] = '{"animation-translate-right-end": a2small, "animation-translate-right-start": !a2small}'>
+                    <div class='title'>{{ a2_top_text }}</div>
+                    <div class='image'>
+                        <img class='img'>
+                        <div id='hidden-text'>{{ a2_hidden_text }}</div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <div class='block-a-content-container' id='block-a-content-container-2'>
+            <div class='block-a-content-container-half'>
+                <div class="content" id='a3' [ngClass] = '{"animation-translate-left-end":a3small, "animation-translate-left-start": !a3small}'>
+                    <div class='title'>{{ a3_top_text }}</div>
+                    <div class='image'>
+                        <img class='img'>
+                        <div id='hidden-text'>{{ a3_hidden_text }}</div>
+                    </div> 
+                </div>
+            </div>
+            <div class='block-a-content-container-half'>
+                <div class="content" id='a4' [ngClass] = '{"animation-opacity-end": a4small, "animation-opacity-start": !a4small}'>
+                    <div class='title'>{{ a4_top_text }}</div>
+                    <div class='image'>
+                        <img class='img'>
+                        <div id='hidden-text'>{{ a4_hidden_text }}</div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <div class='block-a-content-container' id='block-a-content-container-3'>
+                <div class="content" id='a5' [ngClass] = '{"animation-opacity-end": a5small, "animation-opacity-start": !a5small}'>
+                    <div id='create-account' *ngIf='!loggedIn'>
+                        <div id='create-account-title'>{{ createAccountTitle }}</div>
+                        <div id='create-account-content'>
+                            <div id='image'><img></div>
+                            <div id='form'>
+                                <div id='create-account-inputs'>
+                                    <div id='input-title'>Enter Your Email</div>
+                                    <input type="email" class='create-account-input' id='email'>
+                                </div>
+                                <div id='buttons'>
+                                    <div id='button'>Create Account</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id='my-account' *ngIf='loggedIn'>
+
+                    </div>
+                </div>
+        </div>
+
+    </div>
+
+
+    <div id='footer'><div id='footer-text'>Created by: Dakota Korn</div></div>
+
+</div>
+
+

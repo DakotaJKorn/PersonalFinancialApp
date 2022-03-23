@@ -1,0 +1,43 @@
+<div id='container'>
+    <div id='content-container'>
+        <div id='profile-container'>
+            <div id='profile-image'><div id='profile-title'>My Condor</div></div>
+            <div id='profile-name'>{{ user.firstName }} {{ user.lastName }}</div>
+            <!-- <div id='profile-address-1'>{{ user.addressID }}</div> -->
+            <!-- <div id='profile-address-2'>{{ user.profile.city }}, {{ user.profile.state }}</div> -->
+            <div id='profile-phone'>({{ user.phoneNumber | slice:0:3 }}) - {{ user.phoneNumber | slice:3:6 }} - {{ user.phoneNumber | slice:6:10 }}</div>
+            <div id='profile-email'>{{ user.email }}</div>
+        </div>
+
+        <div id='account-container'>
+            <div id='account-title'>Account Overview</div>
+            <div id='account-container-layout'>
+                <div id='account-details'>
+                    <div id='graph-options'>
+                        <div class='graph-option'><span class='text'>Full Account Overview</span><span class='arrow'></span></div>
+                        <div class='graph-option'><span class='text'>Accounts</span><span class='arrow'></span></div>
+                        <div class='graph-option'><span class='text'>Portfolio</span><span class='arrow'></span></div>
+                    </div>
+                </div>
+                <div id='account-graph'>
+                    <div id='data'>
+                        <div id='total-label'>Total Assets</div>
+                        <div id='total-content'>{{ accountTotal | currency }}</div>
+                        <div id='total-label2'>Checking Account</div>
+                        <div id='total-content2'>{{ accountsTotal | currency }}</div>
+                        <div id='total-label3'>Portfolio</div>
+                        <div id='total-content3'>{{ portfolioTotal | currency }}</div>
+                    </div>
+                    <div id='pie-graph-div'>
+                        <div id='pie-graph'>
+                            <condor-pie-graph [accounts]='accountsTotal' [portfolio]='portfolioTotal'></condor-pie-graph>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>
