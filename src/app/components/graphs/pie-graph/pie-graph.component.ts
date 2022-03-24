@@ -37,7 +37,6 @@ export class PieGraphComponent implements OnInit {
 
   createGraph(total:number,accounts:number,portfolio:number):void{
     this.data.datasets[0].data = [accounts, portfolio];
-    console.log(this.chartData);
     this.chart = new Chart('pieChart', {type: 'doughnut', data: this.data})
   }
 

@@ -42,8 +42,6 @@ export class AppCommunicationService {
     this.user = user;
     this.loginService.getUserAccounts(user.id).subscribe(response => {
       this.accounts = {accountsTotal: response.accountsTotal, portfolioTotal: response.portfolioTotal, total: response.accountsTotal + response.portfolioTotal};
-      console.log(response);
-      console.log(this.accounts);
       this.dashboard.setAccounts();
     })
   }
