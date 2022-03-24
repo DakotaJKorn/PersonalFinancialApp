@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+$color-1: #BB4E03;
+$color-2: #D78347;
+$color-3: #013B5E;
+$color-4: #01263E;
+$color-5: #001B25;
+$color-6: white;
+$color-7: whitesmoke;
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: $color-5;
+}
+::-webkit-scrollbar{
+    width: 12px;
+    background-color: $color-5;
+}
+::-webkit-scrollbar-thumb{
+    background-color: $color-1;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
