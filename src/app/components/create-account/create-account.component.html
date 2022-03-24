@@ -1,1 +1,41 @@
-<p>create-account works!</p>
+<div id="container">
+    <div id="form-container">
+        <form [formGroup]="createAccountForm" (ngSubmit)="createAccount()" >
+            <div id="email-container">
+                <div id="initial-email">
+                    <label for="email" >Email</label>
+                    <input id="email" type="text" formControlName="email"/>
+                </div>
+                <div id="confirm-email">
+                    <label for="confirmEmail" >Confirm Email</label>
+                    <input id="confirmEmail" type="text" formControlName="confirmEmail"/>
+                </div>
+                
+            </div>
+            <div id="password-container">
+                <div id="initial-password">
+                    <label for="password" >Password</label>
+                    <input id="password" type="text" formControlName="password"/>
+                </div>
+                <div id="confirm-password">
+                    <label for="confirmPassword" >Confirm Password</label>
+                    <input id="confirmPassword" type="text" formControlName="confirmPassword"/>
+                </div>
+                
+            </div>
+
+            <div id="details-container">
+                <label for="firstName" >First Name</label>
+                <input id="firstName" type="text" formControlName="firstName"/>
+                <label for="lastName" >Last Name</label>
+                <input id="lastName" type="text" formControlName="lastName"/>
+                <label for="phoneNumber" >Phone Number</label>
+                <input id="phoneNumber" type="text" formControlName="phoneNumber"/>
+            </div>
+            <div id="button-container">
+                <button id="createAccountButton" [disabled]="createAccountForm.invalid" >Create Account</button>
+            </div>
+        </form>
+    </div>   
+
+</div>

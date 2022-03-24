@@ -1,0 +1,137 @@
+
+#container{
+    height: calc(100vh - 80px);
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+
+    #form-container{
+        height: 600px;
+        width: 600px;
+        display: flex;
+        background-color: whitesmoke;
+        justify-content: center;
+
+        #email-container{
+            height: 90px;
+            width: 600px;
+            margin-top: 20px;
+            display: flex;
+
+
+            #initial-email{
+                height: 90px;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                #email{
+                    height: 30px;
+                    width: 200px;
+                    margin-top: 5px;
+                }
+
+            }
+            #confirm-email{
+                height: 90px;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                #confirmEmail{
+                    height: 30px;
+                    width: 200px;
+                    margin-top: 5px; 
+                }
+            }
+        }
+
+        #password-container{
+            height: 90px;
+            width: 600px;
+            margin-top: 20px;
+            display: flex;
+
+
+            #initial-password{
+                height: 90px;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                #password{
+                    height: 30px;
+                    width: 200px;
+                    margin-top: 5px;
+                }
+
+            }
+            #confirm-password{
+                height: 90px;
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                #confirmPassword{
+                    height: 30px;
+                    width: 200px;
+                    margin-top: 5px; 
+                 }
+                }
+            }
+        }
+
+
+        #details-container{
+            height: 300px;
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+
+            #firstName{
+                height: 30px;
+                width: 200px;
+                margin-top: 5px; 
+                margin-bottom: 20px;
+            }
+
+            #lastName{
+                height: 30px;
+                width: 200px;
+                margin-top: 5px; 
+                margin-bottom: 20px;
+            }
+
+            #phoneNumber{
+                height: 30px;
+                width: 200px;
+                margin-top: 5px; 
+                margin-bottom: 20px;
+            }
+        }
+
+        #button-container{
+            width:600px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -30px;
+
+            #createAccountButton{
+                height: 50px;
+                width: 150px;
+            }
+        }
+    }

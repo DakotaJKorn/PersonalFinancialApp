@@ -1,7 +1,6 @@
-import { ChangeDetectionStrategy, Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AppCommunicationService } from 'src/app/services/app communication/app-communication.service';
-import { AuthorizationService } from 'src/app/services/authorization/authorization.service';
 import { LoginService } from 'src/app/services/login/login.service';
 
 
@@ -55,11 +54,14 @@ export class HomeComponent implements OnInit {
   loginPassword: string = "";
   token: string = "";
 
-  constructor(private appCommunication: AppCommunicationService, private authorizationService: AuthorizationService, private router: Router, private loginService: LoginService){
+  createAccountEmail: string = "";
+
+  constructor(private appCommunication: AppCommunicationService, private router: Router, private loginService: LoginService){
     appCommunication.setHome(this);
   }
 
   ngOnInit(): void {
+    sessionStorage.removeItem("email");
     this.windowWidth = window.innerWidth;
     this.windowHeight = window.innerHeight;
     
@@ -128,6 +130,11 @@ export class HomeComponent implements OnInit {
       }
     });
 
+  }
+
+  goToCreateAccount(){
+    sessionStorage.setItem("email", this.createAccountEmail);
+    this.router.navigate(['/createAccount']);
   }
 
 }

@@ -73,10 +73,10 @@
                             <div id='form'>
                                 <div id='create-account-inputs'>
                                     <div id='input-title'>Enter Your Email</div>
-                                    <input type="email" class='create-account-input' id='email'>
+                                    <input type="email" class='create-account-input' id='email' [(ngModel)] = "createAccountEmail">
                                 </div>
                                 <div id='buttons'>
-                                    <div id='button'>Create Account</div>
+                                    <div id='button' (click)="goToCreateAccount()">Create Account</div>
                                 </div>
                             </div>
                         </div>
